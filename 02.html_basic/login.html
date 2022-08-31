@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인||SSAFY8기</title>
+    <!-- external: css/common.css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- internal css -->
+    <style>
+    </style>
+
+
+</head>
+<body>
+    <!-- 로고 영역 -->
+    <div><a href="index.html"><img src="./img/lecturer_16.png" alt="싸피로고" title="Home"></a></div>
+
+    <!-- 메뉴 영역
+        공백 문자 builtin entity: &nbsp;
+    -->
+    <div class="menu">
+        <a href="login.html">로그인</a> <span class="seperator">|</span>
+        <a href="member/memberInput.html" class="bold color1">회원가입</a> <span class="seperator">|</span>
+        <a href="./member/memberFind.html" class="color2">아이디/비밀번호찾기</a> <span class="seperator">|</span>
+        <a href="javascript:alert('서비스준비중입니다.')">공지조회[서비스준비중]</a><span class="seperator">|</span>
+        <a href=" https://www.w3schools.com/" title="Go to W3School" target="_blank">W3School[새창열기]</a><span class="seperator">|</span>
+        <a href="mailto:admin@ssafy.com?cc=user1.ssafy.com&subject=ssafy일정문의&body=아래의 내용입력바랍니다.%0d%0A">메일보내기</a><span class="seperator">|</span>
+    </div>
+
+    <!-- 컨텐츠 영역 -->
+  <h3>로그인</h3>
+  <form method="get" action="main.html">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <td><input type="text" name="memberId" autofocus 
+          required placeholder="아이디" ></td>
+      </tr>
+
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="memberPw" tabindex="0" 
+          required placeholder="비밀번호"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="btn"><input  class="normal color1" type="submit" value="로그인"></td>
+      </tr>
+
+    </table>
+  </form>
+    <!-- vscode에서 method="post"로 요청시에 action 수행하지 않음 -->
+    <!-- <form method="get" action="main.html">
+      아이디: <input type="text" name="memberId" autofocus size="40" 
+        required placeholder="아이디는 4~30자리 이내입력하세요." 
+        title="아이디 필수입력항목입니다.">
+      <br>
+      비밀번호: <input type="password" name="memberPw" tabindex="0" size="40"
+      required placeholder="비밀번호는 6~30자리 이내 입력하세요.">
+      <br>
+      주민번호: <input type="text" name="ssn"  size="40" pattern="\d{6}-\d{7}"
+        required placeholder="123456-1234567" >
+        <br>
+      <input type="submit" value="로그인">
+    </form> -->
+    
+
+    <!-- 푸터 영역 -->
+    <hr>
+    <div id="footer">&copy; 2022 SSAFY8기</div>
+</body>
+</html>

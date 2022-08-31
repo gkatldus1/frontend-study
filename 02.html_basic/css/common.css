@@ -1,0 +1,72 @@
+@charset "utf-8";
+ /* logo image */
+img[src$="16.png"]{
+  width: 45px;
+  height:35px;
+}
+
+/* <a> css */
+a:link {
+  text-decoration: none;
+  font-size: 11px;
+  color: blue;
+}
+a:visited{
+  color: gray;
+}
+a:hover{
+  background-color: aqua;
+  color: #fff;
+}
+a:active {
+  text-decoration: underline;
+}
+a.bold{
+  font-weight: bold;
+}
+
+a.color1{
+  color: red;
+}
+
+a.color2{
+  color: darkcyan;
+}
+/* span 구분 */
+span.seperator{
+  font-size: 0.7em;
+  margin: 0 5px;
+  color:blueviolet;
+}
+
+/* 메뉴 영역 */
+div.menu{
+  text-align: right;
+}
+
+/* 푸터 영역 */
+#footer{
+  text-align: center;
+}
+
+/*form*/
+td.btn{
+  text-align: center;
+}
+
+table, tr, td, th{
+  border: solid 1px #1CB1E7;
+  margin: 10px;
+  padding: 5px;
+}
+
+input[type="submit"].normal, input[type="reset"].normal, input[type="button"].normal{
+  width: 80px;
+  height: 25px;
+}
+
+input[type="submit"].color1{
+  background-color: #1CB1E7;
+  color: #fff;
+  border-radius: 12px;
+}

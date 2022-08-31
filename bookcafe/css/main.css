@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* BookCafe main.css */
+
+/* header */
+header{
+  color:#BBBFC1;
+  height: 80px;
+  border: 1px solid red;
+  /* 그림자 효과 */
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header a{
+  color:#BBBFC1;
+}
+
+header > a{
+  font-size: 30px;
+}
+
+
+header>:nth-child(2){
+  font-size: 18px;
+}
+
+header>div{
+  
+  margin-left: 100px;
+  display: inline-block;
+  
+}
+
+
+header>div > div{
+  
+  display: inline-block;
+}
+
+/* a tag 밑줄 제거 */
+a{
+  text-decoration: none;
+}
