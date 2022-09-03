@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic JavaScript</title>
+  <!-- interna js -->
+  <script>
+    var name = "홍길동";
+    var age = 26;
+
+
+    //함수 선언
+    function printInfo(){
+      //내장함수
+      let html = "<h3>" + name + "</h3>";
+      document.write(html);
+      document.write("<hr>")
+    }
+
+    //익명함수 선언: 윈도우 로드시 이벤트 처리
+    window.onload = function(){
+      printInfo();
+      // let divElement= document.getElementById("info");
+      // divElement.innerHTML = "<h1 style='color:red;'>동적제목입니다</h1>";
+    }
+  </script>
+</head>
+<body>
+  <div id="info"></div>
+  <script>
+    let divElement= document.getElementById("info");
+    console.log(divElement);
+    divElement.innerHTML = "<h1 style='color:red;'>동적제목입니다</h1>";
+  </script>
+</body>
+</html>

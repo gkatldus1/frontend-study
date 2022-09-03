@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMS</title>
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 외부 js -->
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <!-- 로고 영역 -->
+            <div class="logo"><a href="index.html"><img src="./img/logo.png" alt="로고" title="Home"></a></div>
+
+            <!-- 메뉴 영역 -->
+            <div class="menu">
+                <a href="login.html" class="bold">로그인</a><span class="separator">|</span>
+                <a href="memberInput.html" class="bold color1">회원가입</a><span class="separator">|</span> 
+                <a href="memberFind.html" class="color2">아이디/비밀번호찾기</a><span class="separator">|</span> 
+                <a href="boardList.html">게시글조회</a><span class="separator">|</span>
+            </div>            
+        </nav>
+    </header>
+
+    <main>
+        <!-- 상품소개 -->
+        <section>
+            <h3 class="title_text">[ 로그인 ]</h3>
+            <div class="form">
+                <!-- <form action="main.html" method="get"> -->
+                <form action="javascript:login();" method="get" name="loginForm">    
+                    <div><input type="text" name="memberId" id="memberId" autofocus required placeholder="아이디"></div>
+                    <div><input type="password" name="memberPw" id="memberPw" required placeholder="비밀번호"></div>
+                    <div class="button"><input type="submit" value="Login" class="login_button"></div>
+                </form>
+            </div>
+        </main>
+    <!-- footer -->
+    <footer id="footer">&copy; 2022 SSAFY8기</footer>
+</body>
+</html>

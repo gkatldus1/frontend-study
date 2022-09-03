@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMS</title>
+    <!-- 외부 css : common.css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 외부 js : common.js -->
+    <script src="js/common.js"></script>
+    <!-- 외부 js(회원: 아이디 중복검색, 비밀번호보이기) : member.js -->
+    <script src="js/member.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <!-- 로고 영역 -->
+            <div class="logo"><a href="index.html"><img src="./img/logo.png" alt="로고" title="Home"></a></div>
+
+            <!-- 메뉴 영역 -->
+            <div class="menu">
+                <a href="login.html" class="bold">로그인</a><span class="separator">|</span>
+                <a href="memberInput.html" class="bold color1">회원가입</a><span class="separator">|</span> 
+                <a href="memberFind.html" class="color2">아이디/비밀번호찾기</a><span class="separator">|</span> 
+                <a href="boardList.html">게시글조회</a><span class="separator">|</span>
+            </div>            
+        </nav>
+    </header>
+
+    <main>
+        <!-- 회원가입 -->
+        <section>
+            <h3 class="title_text">[ 회원가입 ]</h3>
+            <div class="form">
+                <form action="javascript:actionMemberInput()" method="get" name="memberInputForm">    
+                    <div>
+                        <input type="text" name="memberId" id="memberId" placeholder="아이디 중복을 먼저 진행 하시기 바랍니다." autofocus required>
+                        <!-- 아이디 중복확인 -->
+                        <input type="button" value="중복확인" onclick="openCheckId();" class="normal">
+                    </div>
+                    <div><input type="password" name="memberPw" id="memberPw" required placeholder="비밀번호"></div>
+                    <div>
+                        <input type="password" name="memberPwConfirm" id="memberPwConfirm" required placeholder="비밀번호 확인"
+                            onkeyup="keyupMemberPw()"><br/>
+                        <span id="memberPwMessage"></span><br/>
+                        <!-- 비밀번호 보이기/감추기 -->
+                        <img src="img/show.png" id="imgShow" onclick="clickShow()"><br/>
+                        <input type="checkbox" name="checkboxShow" id="checkboxShow" onclick="clickShow()">
+                        <span id="textShow">보이기</span>
+                    </div>
+                    <div><input type="text" name="name" id="name" required placeholder="이름"></div>
+                    <div><input type="text" name="mobile" id="mobile" required placeholder="휴대폰 (010-1234-1234)"></div>
+                    <div><input type="text" name="email" id="email" required placeholder="이메일 (account@email.com)""></div>
+                    <div class="button"><input type="submit" value="Member Join" class="login_button"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="footer">&copy; 2022 SSAFY8기</footer>
+</body>
+</html>

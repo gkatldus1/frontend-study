@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세조회</title>
+    <!-- external css -->
+    <!-- <link rel="stylesheet" href="css/common.css"> -->
+    <!-- internal css -->
+    <style>
+        /* external css */
+        @import "css/common.css";
+
+        #item_img {
+            text-align: center;
+        }
+        img[src] {
+            border: solid 1px #B4B9BF;
+        }
+        img[src^="img/car"] { 
+            width: 95%;   
+            height: 95%;
+        }
+
+        /* external css */
+        h3.title_text {
+            color: #059862;
+            font-size: 30px;
+        } 
+    </style>
+    <!-- external js -->
+    <script>
+        /*  TODO: 윈도우 로드 이벤트 익명함수 
+            1. 부모창에서 자식창 오픈한 현재 자식창의 요청 url 정보 가져오기
+            2. 요청 url query string 정보에서 상세보기 이미지 정보가져오기: 
+            3. <img src="img/car_01_detail.png" id="item_img_name"> 이미지를 "2." 해당 선택한 상세보기 이미지로 src 변경하기
+                3-1. Element src 속성 사용해서 이미지 변경하기
+                3-2. Element setAttribute(속성명, 속성값) 함수 사용해서 이미지 변경하기
+                3-3. Element innerHTML property 이용해서 기존 이미지 태그 대신에 해당 이미지 태그로 변경하기
+        */
+        window.onload = function() {
+            // 자식창의 url 정보 가져오기
+            var url = location.href;
+            var params = url.split("=");
+            // 부모창에서 새창오픈한 url 정보에서 선택한 이미지 이름 가져오기 
+            var imgName = params[params.length - 1];
+            console.log(imgName);
+            var imgElement = document.getElementById("item_img_name");
+
+            // 3-1. Element src 속성 사용해서 이미지 변경하기
+            // imgElement.src = imgName;
+
+            // 3-2. Element setAttribute(속성명, 속성값) 함수 사용해서 이미지 변경하기
+            // imgElement.setAttribute("src", "img/dog_01.jpg");
+
+            // 3-3. Element innerHTML property 이용해서 기존 이미지 태그 대신에 해당 이미지 태그로 변경하기
+            var item_imgElement = document.getElementById("item_img");
+            item_imgElement.innerHTML = "";
+            var html = `<img src="` + imgName + `" id="item_img_name" title="Click Window Close" onclick="window.close();">`;
+            console.log(html);
+            item_imgElement.innerHTML = html;
+        }
+    </script>
+</head>
+<body>
+    <h3 class="title_text">[ 상세조회 ]</h3>
+    <div id="item_img">
+        <img src="img/car_01_detail.png" id="item_img_name" title="Click Window Close" onclick="window.close();">
+    </div>
+</body>
+</html>
+
+<!-- 
+-- 자식창에서 부모 url 
+var parentURL = opener.location.href; 
+
+-- 부모창 새로고침
+window.opener.location.href = window.opener.document.URL;
+
+
+location.href          http://Godwithus.tistory.com/test/test.php?key=val#getURL
+location.hostname      http://Godwithus.tistory.com
+location.pathname      /test/test.php
+location.protocol      http:
+location.search        ?key=val
+location.hash          #getURL
+location.hash.substr(1)  getURL
+location.assing("http://www.loads_a_new_document.com"); loads a new document
+
+
+-->

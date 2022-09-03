@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMS</title>
+    <!-- TODO: 외부 css : common.css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- TODO: 외부 js : common.js -->
+    <script src="js/common.js"></script>
+    <!-- 외부 js(회원: 아이디 중복검색, 비밀번호보이기) : member.js -->
+    <script src="js/member.js"></script>
+    <!-- 내부 js -->
+    <script>
+        window.onload = function() {
+            // 부모창의 아이디데이터가져오기: 부모창 정보접근: opener.document.xxx
+            let parentMemberId = opener.document.getElementById("memberId").value;
+
+            // 부모창의 아이디 데이터가 있으면 자식창의 아이디 데이터로 초기화
+            if (parentMemberId != null && parentMemberId.trim().length > 0) {
+                // 자식창의 아이디 데이터로 초기화
+                document.getElementById("checkId").value = parentMemberId;
+            }
+            
+            // 아이디사용하기 버튼 비활성화
+            document.getElementById("btnUseCheckId").setAttribute("disabled", "disabled");
+
+            // 메세지출력영역 보이지않게 하기
+            document.getElementById("result").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section>
+            <h3 class="title_text">[ 아이디 중복확인 ]</h3>
+            <div class="form">
+                <form>    
+                    <div>아이디:</div>
+                    <div><input type="text" name="checkId" id="checkId" autofocus></div>
+                    <div id="result">메세지출력</div>
+                    <div>
+                        <input type="button" value="중복확인" onclick="clickCheckId();">
+                        <input type="button" value="아이디사용하기" onclick="useCheckId()" id="btnUseCheckId">
+                        <input type="button" value="취소" onclick="clearCheckId()">
+                        <input type="button" value="창닫기" onclick="window.close();"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="footer">&copy; 2022 SSAFY8기</footer>
+</body>
+</html>

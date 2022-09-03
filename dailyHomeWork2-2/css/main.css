@@ -27,7 +27,7 @@ header {
 }
 
 /* header의 내용에 들어갈 클래스 선택자. html 파일 참고 */
-header-nav {
+.header-nav {
   /* 수평 요소 동적 크기 구성을 위한 css 속성 */
   display: flex;
   justify-content: space-between;
@@ -59,7 +59,7 @@ header-nav {
 }
 
 /* form 클래스 하위의 input 요소 css 설정을 위한 선택자 */
-form input {
+form  input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -102,7 +102,7 @@ form button {
 }
 
 /* from 클래스 하위 message 클래스 하위 앵커 태그 요소 css 선택자 */
-.from .message a {
+.form .message a {
   color: green;
   text-decoration: none;
 }
@@ -138,7 +138,7 @@ form button {
 footer {
   /* 맨 아래 고정을 위한 설정 */
   position: relative;
-  bottom: 1rem;
+  bottom: 1px;
   /* 배경색과 글자색 */
   background-color: #53e3a6;
   color: white;

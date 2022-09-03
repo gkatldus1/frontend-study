@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMS</title>
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 외부 js -->
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <!-- 로고 영역 -->
+            <div class="logo"><a href="index.html"><img src="./img/logo.png" alt="로고" title="Home"></a></div>
+
+            <!-- 메뉴 영역 -->
+            <div class="menu">
+                <a href="index.html" class="bold">로그아웃</a><span class="separator">|</span>
+                <a href="memberInfo.html" class="bold color1">마이페이지</a><span class="separator">|</span> 
+                <a href="boardList.html">게시글조회</a><span class="separator">|</span>
+            </div>            
+        </nav>
+    </header>
+
+    <main>
+        <!-- 상품소개 -->
+        <section>
+            <h3 class="title_text">[ 주목할만한 신차 ]</h3>
+            <div class="item_list">
+                <div class="item item1">
+                    <div class="item_img">
+                        <img src="img/car_01.png" title="" alt="">
+                    </div>
+                    <div id="item_info">
+                    2023 스타리아<br />
+                    현대
+                    </div>
+                </div>
+                <div class="item item2">
+                    <div class="item_img">
+                        <img src="img/car_02.png" title="" alt="">
+                    </div>
+                    <div id="item item_info">
+                    2023 쉐보레 볼트 EUV<br>
+                    쉐보레
+                    </div>
+                </div>
+                <div class="item item3">
+                    <div class="item_img">
+                        <img src="img/car_03.png" title="" alt="">
+                    </div>
+                    <div id="item_info">
+                    2023 쏘렌토 하이브리드<br>
+                    기아
+                    </div>
+                </div>
+                <div class="item item4">
+                    <div class="item_img">
+                        <img src="img/car_04.png" title="" alt="">
+                    </div>
+                    <div id="item_info">
+                    2023 랜드로버 레인지로버<br>
+                    랜드로버
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- 게시글 -->
+            <article class="board">
+                <h3 class="title_text">[ 게시글 ]</h3>
+                <div class="board">
+                    <table class="table table_striped">
+                    <thead>
+                        <tr>
+                        <th class="title">제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="isLoginCheck();">
+                            <td>JSP에 JSTL Core Tags 중 c:import 사용시 에러가 납니다.</td>
+                            <td class="center">퍼블지</td>
+                            <td class="center">2022.08.22</td>
+                            <td class="center">75</td>
+                        </tr>
+                        <tr onclick="isLoginCheck();">
+                            <td>css의 hover 관련하여 질문 드립니다</td>
+                            <td class="center">프엔잘</td>
+                            <td class="center">2022.08.15</td>
+                            <td class="center">29</td>
+                        </tr>
+                        <tr onclick="isLoginCheck();">
+                            <td>웹 크롤링 작업중인데 html내에 함수는 어떻게 다뤄야 하나요?</td>
+                            <td class="center">엘튜터</td>
+                            <td class="center">2022.08.12</td>
+                            <td class="center">56</td>
+                        </tr>
+                        <tr onclick="isLoginCheck();">
+                            <td>css의 flex 관련하여 질문 드립니다</td>
+                            <td class="center">프엔잘</td>
+                            <td class="center">2022.08.08</td>
+                            <td class="center">29</td>
+                        </tr>
+                        <tr onclick="isLoginCheck();">
+                            <td>table css 관련하여 질문 드립니다.</td>
+                            <td class="center">엘튜터</td>
+                            <td class="center">2022.08.04</td>
+                            <td class="center">56</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </main>    
+    <!-- footer -->
+    <footer id="footer">&copy; 2022 SSAFY8기</footer>
+</body>
+</html>
